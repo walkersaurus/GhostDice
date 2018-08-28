@@ -19,9 +19,9 @@ async def on_message(message):
 
 	if message.content.startswith('/roll'):
 		try:
-			qty = [int(n) for n in message.content.split() if n.isdigit()]
+			qty = int(message.content.split()[1])
 			if qty < 666:
-				msg = 'Rolling ' + qty[0] + ' dice...You got ' + drew_dbot.GhostyMcGhostface(qty)
+				msg = 'Rolling ' + str(qty[0]) + ' dice...You got ' + str(drew_dbot.GhostyMcGhostface(qty))
 			else:
 				msg = 'That\'s too many dice. I only have 111 arms. Yeah that\'s fifty times more than you have (assuming you have two), but even robots have their limitations.'
 		except:
