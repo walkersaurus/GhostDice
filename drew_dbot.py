@@ -16,4 +16,4 @@ def GhostyMcGhostface(numberOfRolls):
     if diceRolls[0] == 6:
         return str(sum(diceRolls) - 6) + ' and a ghost. Hold onto your butts!'
     else:
-        return str(sum(diceRolls) + '.')
+        return str(sum(diceRolls)) + '.'
