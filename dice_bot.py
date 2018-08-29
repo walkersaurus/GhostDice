@@ -2,9 +2,27 @@
 import discord
 import drew_dbot
 import re
+import random
+
+def rollDie():
+    #Rolls a die
+    min = 1
+    max = 6
+    roll = random.randint(min, max,)
+    return roll
+
+def GhostyMcGhostface(numberOfRolls):
+    diceRolls = []
+
+    for i in range(1, numberOfRolls):
+        diceRolls.append(rollDie())
+
+    if diceRolls[0] == 6:
+        return str(sum(diceRolls) - 6) + ' and a ghost. Hold onto your butts!'
+    else:
+return str(sum(diceRolls)) + '.'
 
 TOKEN = 'NDc3MzIwODY1OTIzNzI3Mzcz.Dk6k1A.HdpX4joH5qrtLu-O7AgcBwfaQbQ'
-
 client = discord.Client()
 
 @client.event
